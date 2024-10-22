@@ -157,7 +157,7 @@ function User() {
           ):(
             <>
             <h3>Crédito:</h3>
-            <h3 style={{color: "green"}}>{formatCurrency(totalValue || 0)}</h3>
+            <h3 style={{color: "green", backgroundColor: "black"}}>{formatCurrency(totalValue || 0)}</h3>
           {/* Formatação com 2 casas decimais */}
           </>
           )}
