@@ -5,11 +5,15 @@
   text-align: center;
 }
 
-.container{
+.container {
+  max-width: 100%;
+  overflow-x: hidden;
+  padding: 20px;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 }
 
 .logo {
