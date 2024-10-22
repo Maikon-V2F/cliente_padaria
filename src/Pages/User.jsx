@@ -148,9 +148,21 @@ function User() {
       {userData ? (
         <>
           <h1>{userData.name}</h1> {/* Nome do usuário */}
-          <h3>Valor total das compras:</h3>
-          <h3>{formatCurrency(totalValue || 0)}</h3>
+          {totalValue >= 0 ? (
+            <>
+            <h3>Valor total das compras:</h3>
+            <h3>{formatCurrency(totalValue || 0)}</h3>
           {/* Formatação com 2 casas decimais */}
+          </>
+          ):(
+            <>
+            <h3>Crédtio:</h3>
+            <h3 style={{color: "green"}}>{formatCurrency(totalValue || 0)}</h3>
+          {/* Formatação com 2 casas decimais */}
+          </>
+          )}
+          
+          
         </>
       ) : (
         <h3>Carregando...</h3> // Exibe mensagem enquanto os dados estão sendo carregados
